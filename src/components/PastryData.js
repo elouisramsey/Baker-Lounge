@@ -4,8 +4,9 @@ import { Button, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import PastryDataStyle from '../components/styled components/PastryData.styled'
 
-const PastryData = ({ pastry }) => {
+const PastryData = ({ pastry, cta, id }) => {
   const { name, slug, images, price } = pastry
+
   return (
     <PastryDataStyle>
       <div className='pastry-container'>
@@ -13,10 +14,18 @@ const PastryData = ({ pastry }) => {
           <img src={images[0]} alt={name} />
           <div className='info'>
             <p>{name}</p>
-            <h4>{'\u20A6'}{price}</h4>
+            <h4>
+              {'\u20A6'}
+              {price}
+            </h4>
           </div>
         </Link>
-        <Button size='huge' color='black' animated='vertical'>
+        <Button
+          onClick={() => cta(id)}
+          size='huge'
+          color='black'
+          animated='vertical'
+        >
           <Button.Content visible>Add to Cart</Button.Content>
           <Button.Content hidden>
             <Icon name='shop' />

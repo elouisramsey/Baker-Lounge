@@ -7,7 +7,7 @@ const BestSeller = () => {
   const Pastry = useContext(Context)
 
   const pastries = Pastry.bestSellers.map((pastry) => {
-    return <PastryData key={pastry.id} pastry={pastry} />
+    return <PastryData key={pastry.id} pastry={pastry} cta={Pastry.cartBtn} id={pastry.id} />
   })
 
   return (

@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 const HeroStyle = styled.div`
-  height: 100%;
+  margin-top: 2em;
+  height: 36vh;
+  position: relative;
 
   .ui.grid {
     height: 100%;
@@ -10,6 +12,13 @@ const HeroStyle = styled.div`
   .ui.grid > .row {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  svg {
+    width: 42%;
+    position: absolute;
+    top: 0px;
+    right: -23%;
   }
 
   .intro-text-side {

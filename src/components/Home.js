@@ -7,14 +7,12 @@ import Why from './Home/Why'
 const Home = () => {
   return (
     <HomeStyle>
-      <div className='hero'>
-        <Hero />
-        <hr />
-        <BestSeller />
-        <hr />
-        <h2>/Why Choose Us</h2>
-        <Why />
-      </div>
+      <Hero />
+      <hr />
+      <BestSeller />
+      <hr />
+      <h2>/Why Choose Us</h2>
+      <Why />
     </HomeStyle>
   )
 }

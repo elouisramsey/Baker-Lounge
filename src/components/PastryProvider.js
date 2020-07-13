@@ -7,7 +7,8 @@ const PastryProvider = (props) => {
     pastries: [],
     sortedPastries: [],
     bestSellers: [],
-    loading: true
+    loading: true,
+    cart: []
   })
 
   useEffect(() => {
@@ -22,6 +23,8 @@ const PastryProvider = (props) => {
     })
   }, [])
 
+  const handleAddToCart = (id) => console.log(`i was added to cart ${id}`)
+
   const formatData = (items) => {
     const tempPastries = items.map((item) => {
       const id = item.sys.id
@@ -34,7 +37,7 @@ const PastryProvider = (props) => {
   }
 
   return (
-    <PastryContext.Provider value={state}>
+    <PastryContext.Provider value={{ ...state, cartBtn: handleAddToCart }}>
       {props.children}
     </PastryContext.Provider>
   )

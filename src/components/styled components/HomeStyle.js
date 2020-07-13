@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 
 const HomeStyle = styled.div`
-height: 100vh;
-.hero {
-    margin-top: 2em;
-    height: 36vh;
-}
 
 hr {
     width: 84%;
@@ -20,6 +15,11 @@ h2 {
     font-family: 'Poppins', sans-serif !important;
     text-align: center;
 }
+
+.ui.huge.button, .ui.huge.buttons .button, .ui.huge.buttons .or {
+    font-size: 1em;
+}
+
 `
 
 export default HomeStyle
